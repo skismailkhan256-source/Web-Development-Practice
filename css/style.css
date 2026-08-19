@@ -1,11 +1,158 @@
-.container {
-    background-color: green;
+/* ---------- BASIC ---------- */
+
+* {
+    box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+
+/* ---------- MAIN CONTAINER ---------- */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+
+/* ---------- HEADER ---------- */
+
+header {
+    background: linear-gradient(135deg, #0866d8, #0052b8);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 36px;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+/* ---------- BUY CAR SECTION ---------- */
+
+.buy-cars {
+    background-color: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-left: 5px solid #1769d5;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.buy-cars h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.buy-cars p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* ---------- SELL CAR SECTION ---------- */
+
+.sell-cars {
+    background-color: white;
+    margin-top: 25px;
+    padding: 25px;
+    border-left: 5px solid #20a85a;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.sell-cars h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.sell-cars p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0866d8;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    margin-top: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #004da8;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- YELLOW BOX ---------- */
 
 .yellow {
-    background-color: yellow;
+    background-color: #fff4c2;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
 }
 
+
+/* ---------- SPECIAL BOX ---------- */
+
 #special {
-    background-color: aqua;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+    }
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .buy-cars,
+    .sell-cars {
+        padding: 20px;
+    }
 }
