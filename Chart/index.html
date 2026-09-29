@@ -3,17 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Chart.js Tutorial</title>
+
   <style>
     body {
       font-family: Arial;
       padding: 20px;
     }
+
     .chart-container {
       width: 600px;
       margin: auto;
     }
   </style>
 </head>
+
 <body>
 
   <h2>My First Chart</h2>
@@ -22,34 +25,52 @@
     <canvas id="myChart"></canvas>
   </div>
 
-  <!-- ✅ Chart.js CDN -->
+  <button id="btn">Change Data</button>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script>
-    // JS will go here
-const ctx = document.getElementById('myChart');
 
-new Chart(ctx, {
-  type: 'radar',
-  data: {
-    labels: ['Speed', 'Strength', 'Skill'],
-    datasets: [{
-      label: 'Player 1',
-      data: [80, 90, 70],
-      backgroundColor: 'rgba(0, 0, 255, 0.2)',
-      borderColor: 'blue'
-    },
-  
-  {
-      label: 'Player 2',
-      data: [10, 50, 90],
-      backgroundColor: 'rgba(10, 10, 55, 0.2)',
-      borderColor: 'red'
-    }]
-  },
+    const ctx = document.getElementById('myChart');
+    const btn = document.getElementById('btn');
 
-  
-});
+    let chart = new Chart(ctx, {
+
+      type: 'radar',
+
+      data: {
+        labels: ['Speed', 'Strength', 'Skill'],
+
+        datasets: [
+
+          {
+            label: 'Player 1',
+            data: [80, 90, 70],
+            backgroundColor: 'rgba(0, 0, 255, 0.2)',
+            borderColor: 'blue'
+          },
+
+          {
+            label: 'Player 2',
+            data: [10, 50, 90],
+            backgroundColor: 'rgba(10, 10, 55, 0.2)',
+            borderColor: 'red'
+          }
+
+        ]
+      }
+
+    });
+
+    // Button click
+    btn.addEventListener('click', () => {
+
+      chart.data.datasets[0].data = [10, 15, 20];
+
+      chart.update();
+
+    });
+
   </script>
 
 </body>
