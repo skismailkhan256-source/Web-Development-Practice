@@ -30,14 +30,12 @@
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
-  type: 'line',
+  type: 'pie',
   data: {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+    labels: ['Red', 'Blue', 'Yellow'],
     datasets: [{
-      label: 'Revenue',
-      data: [10, 20, 15, 25],
-      borderColor: 'blue',
-      fill: false
+      data: [10, 20, 30],
+      backgroundColor: ['red', 'blue', 'yellow']
     }]
   }
 });
