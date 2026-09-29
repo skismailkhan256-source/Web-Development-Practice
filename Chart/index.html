@@ -30,14 +30,25 @@
 const ctx = document.getElementById('myChart');
 
 new Chart(ctx, {
-  type: 'doughnut',
+  type: 'radar',
   data: {
-    labels: ['A', 'B', 'C'],
+    labels: ['Speed', 'Strength', 'Skill'],
     datasets: [{
-      data: [30, 40, 30],
-      backgroundColor: ['purple', 'cyan', 'orange']
+      label: 'Player 1',
+      data: [80, 90, 70],
+      backgroundColor: 'rgba(0, 0, 255, 0.2)',
+      borderColor: 'blue'
+    },
+  
+  {
+      label: 'Player 2',
+      data: [10, 50, 90],
+      backgroundColor: 'rgba(10, 10, 55, 0.2)',
+      borderColor: 'red'
     }]
-  }
+  },
+
+  
 });
   </script>
 
